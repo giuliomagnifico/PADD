@@ -2,73 +2,39 @@
 
 PADD (formerly Chronometer2) is a more expansive version of the original chronometer.sh that is included with [Pi-Hole](https://pi-hole.net). PADD provides in-depth information about your Pi-hole.
 
+### Original PADD
+
 ![PADD Screenshot](https://pi-hole.github.io/graphics/Screenshots/padd.png)
+
+### Customized for 800x480px, 100clx32ln - Tested on Pimoroni HyperPixel 4.0 display
+
+![CleanShot-21022025 at 00 49 46](https://github.com/user-attachments/assets/9d45ccb8-9b46-4c43-8b27-23a34cb7a352)
 
 ***Note:** PADD has been adopted by the Pi-hole team, thanks to JPMCK for creating this helpful tool!
 
-## Setup PADD
+# Setup PADD
+
+*For more info, check out the details in the original repo: [pi-hole/PADD](https://github.com/pi-hole/PADD)*
+
 *More in-depth information about setting up PADD can be found in this repo’s [wiki](https://github.com/pi-hole/PADD/wiki/Setup).*
 
-- Get a copy of PADD by running:
+## Setup This Custom PADD
 
-```bash
-cd ~
-wget -O padd.sh https://install.padd.sh
+To display it correctly, you'll need an 800x480px display (I'm using the [HyperPixel 4.0 - Hi-Res Display for Raspberry Pi](https://shop.pimoroni.com/products/hyperpixel-4?variant=12569485443155)). You’ll also need to run Unbound to get the updated stats from `root.hints`.
+
+To install this custom version, simply replace the original `padd.sh` with the modified [padd.sh](https://github.com/giuliomagnifico/PADD/blob/master/padd.sh) from this repository  (check the execution permission when you replace the file).
+
+Launch it with a 0 offset on both the x and y axes:
+
+
 ```
-or
-```bash
-cd ~
-curl -sSL https://install.padd.sh -o padd.sh
-```
-
-- Make PADD executable by running
-
-```bash
-sudo chmod +x padd.sh
-```
-
-- Set PADD to auto run by adding the following to the end of `~/.bashrc`:
-
-```bash
 # Run PADD
-# If we’re on the PiTFT screen (ssh is xterm)
+
 if [ "$TERM" == "linux" ] ; then
   while :
   do
-    ./padd.sh
+    ./padd.sh --xoff 0 --yoff 0
     sleep 1
   done
 fi
-```
-
-One line version
-
-```bash
-cd ~ ; echo "if [ \"\$TERM\" == \"linux\" ] ; then\n  while :\n  do\n    ./padd.sh\n    sleep 1\n  done\nfi" | tee ~/.bashrc -a
-```
-
-- Reboot your Pi-Hole by running `sudo reboot`. PADD should now run when your Pi-Hole has completed booting.
-
-## Updating PADD
-- Simply run
-
-```bash
-./padd.sh -u
-```
-
-- or run the same commands you used to install
-
-```bash
-cd ~
-wget -O padd.sh https://install.padd.sh
-```
-```bash
-cd ~
-curl -sSL https://install.padd.sh -o padd.sh
-```
-
-## Running Pi-hole in a Docker Container
-If you're running Pi-hole in the official Docker Container, `padd.sh` is pre-installed and named `padd`. It can be used with the following command:
-```bash
-docker exec -it <container_name> padd [padd_options]
 ```

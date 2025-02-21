@@ -512,7 +512,7 @@ GetNetworkInformation() {
     #    # One IPv4 address available
     else
         # More than one IPv4 address available
-        pi_ip4_addr="${pi_ip4_addr}+"
+        pi_ip4_addr="${pi_ip4_addr}"
     fi
 
     # Get IPv6 address of the default interface
@@ -1159,8 +1159,8 @@ PrintDashboard() {
     else # ${padd_size} = mega
 	############################################# 800x480px 100LN x 32CL #############################################
         moveXOffset; printf "%s${clear_line}\n" "${padd_logo_retro_1}"
-        moveXOffset; printf "%s${clear_line}\n" "${padd_logo_retro_2}   Pi-hole® ${core_version_heatmap}${CORE_VERSION}${reset_text} Web ${web_version_heatmap}${WEB_VERSION}${reset_text} FTL ${ftl_version_heatmap}${FTL_VERSION}${reset_text} PADD ${padd_version_heatmap}${padd_version}${reset_text} Unbound ${green_text}v${unbound}${reset_text}"
-        moveXOffset; printf "%s${clear_line}\n" "${padd_logo_retro_3}   ${pihole_check_box} Core  ${ftl_check_box} FTL   ${mega_status}${reset_text} ${check_box_info} "$(date +%d/%m/%y)", "$(date +%R)" ${reset_text}"
+        moveXOffset; printf "%s${clear_line}\n" "${padd_logo_retro_2}  Pi-hole® ${core_version_heatmap}${CORE_VERSION}${reset_text} Web ${web_version_heatmap}${WEB_VERSION}${reset_text} FTL ${ftl_version_heatmap}${FTL_VERSION}${reset_text} PADD ${padd_version_heatmap}${padd_version}${reset_text} Unbound ${green_text}v${unbound}${reset_text}"
+        moveXOffset; printf "%s${clear_line}\n" "${padd_logo_retro_3}  ${dns_check_box} DNS  ${ftl_check_box} FTL   ${mega_status}${reset_text} ${check_box_info} "$(date +%d/%m/%y)", "$(date +%R)" ${reset_text}"
         moveXOffset; printf "%s${clear_line}\n" ""
         moveXOffset; printf "%s${clear_line}\n" "${bold_text}STATS==============================================================================================${reset_text}"
         moveXOffset; printf " %-10s%-29s %-10s[%-40s] %-5s${clear_line}\n" "Blocking:" "${domains_being_blocked} domains" "Piholed:" "${ads_blocked_bar}" "${ads_percentage_today}%"

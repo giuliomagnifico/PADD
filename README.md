@@ -20,7 +20,7 @@ Here's a real photo (not a screenshot) of how it looks on my home Raspberry Pi i
 
 ## Setup This Custom PADD
 
-To display it correctly, you'll need an 800x480px display (I'm using the [HyperPixel 4.0 - Hi-Res Display for Raspberry Pi](https://shop.pimoroni.com/products/hyperpixel-4?variant=12569485443155)). You’ll also need to run Unbound to get the updated stats from `root.hints`.
+To display it correctly, you'll need an 800x480px display (I'm using the [HyperPixel 4.0 - Hi-Res Display for Raspberry Pi](https://shop.pimoroni.com/products/hyperpixel-4?variant=12569485443155)), or a screen with a frame buffer of 100 lines × 32 columns. You’ll also need to run Unbound to get the updated stats from `root.hints`.
 
 To install this custom version, simply replace the original `padd.sh` with the modified [padd.sh](https://github.com/giuliomagnifico/PADD/blob/master/padd.sh) from this repository  (check the execution permission when you replace the file).
 

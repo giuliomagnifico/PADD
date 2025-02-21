@@ -4,9 +4,9 @@ PADD (formerly Chronometer2) is a more expansive version of the original chronom
 
 ### Original PADD
 
-![PADD Screenshot](https://pi-hole.github.io/graphics/Screenshots/padd.png)
+[PADD Screenshot](https://pi-hole.github.io/graphics/Screenshots/padd.png)
 
-### Customized for 800x480px, 100clx32ln - Tested on Pimoroni HyperPixel 4.0 display
+### PADD-Hyper for 800x480px, 100clx32ln - Tested on Pimoroni HyperPixel 4.0 display
 
 ![CleanShot-21022025 at 00 49 46](https://github.com/user-attachments/assets/9d45ccb8-9b46-4c43-8b27-23a34cb7a352)
 

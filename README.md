@@ -39,3 +39,5 @@ if [ "$TERM" == "linux" ] ; then
   done
 fi
 ```
+
+**PS:** Here's a real photo (I mean not a screenshot) of how it looks on my home Raspberry Pi installation:  [PADD Hyper | Giulio Magnifico](https://giuliomagnifico.blog/post/2025-02-21-padd-hyper/)

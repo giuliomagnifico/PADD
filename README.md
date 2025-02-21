@@ -10,8 +10,7 @@ PADD (formerly Chronometer2) is a more expansive version of the original chronom
 
 ![PADD-Hyper](https://github.com/user-attachments/assets/6ae24843-9331-4e59-bb0d-51a084dc12dc)
 
-
-***Note:** PADD has been adopted by the Pi-hole team, thanks to JPMCK for creating this helpful tool!
+Here's a real photo (not a screenshot) of how it looks on my home Raspberry Pi installation:  [PADD Hyper | Giulio Magnifico](https://giuliomagnifico.blog/post/2025-02-21-padd-hyper/)
 
 # Setup PADD
 
@@ -39,5 +38,3 @@ if [ "$TERM" == "linux" ] ; then
   done
 fi
 ```
-
-**PS:** Here's a real photo (I mean not a screenshot) of how it looks on my home Raspberry Pi installation:  [PADD Hyper | Giulio Magnifico](https://giuliomagnifico.blog/post/2025-02-21-padd-hyper/)
